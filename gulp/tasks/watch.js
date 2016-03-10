@@ -6,7 +6,7 @@
 var gulp = require('gulp');
 
 require("./sass");
-
+require('./tmp');
 var watchTask = {
     workerCss: function () {
         gulp.watch('sass/worker/**/*.scss', ['workerCss']);
@@ -16,6 +16,9 @@ var watchTask = {
     },
     demoCss:function(){
          gulp.watch('sass/**/**/*.scss', ['demoCss']);
+    },
+    uiTmp:function(){
+        gulp.watch('views/**/**/*.html',['tmp']);
     }
 };
 
@@ -23,6 +26,8 @@ var watchTask = {
 gulp.task('cssWatch:worker', watchTask.workerCss);
 
 gulp.task('cssWatch', watchTask.demoCss);
+
+gulp.task('tmpWatch', watchTask.uiTmp);
 
 
 module.exports = watchTask;

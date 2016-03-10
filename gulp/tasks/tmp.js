@@ -5,3 +5,11 @@
  */
 var gulp = require('gulp');
 
+var tmodjs = require('gulp-tmod');
+gulp.task('tmp', function () {
+    return gulp.src('views/**/*.html')
+        .pipe(tmodjs({
+            templateBase: 'template'
+        }))
+        .pipe(gulp.dest('release'));
+});

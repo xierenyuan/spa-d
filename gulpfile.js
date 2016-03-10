@@ -11,7 +11,7 @@ require('./gulp/tasks/commonmin');
 require('./gulp/tasks/rjs');
 require('./gulp/tasks/sass');
 require('./gulp/tasks/imgmin');
-//require('./gulp/tasks/tmp');
+require('./gulp/tasks/tmp');
 
 var gulp = require('gulp');
 
@@ -28,13 +28,14 @@ gulp.task('release', [
     'js:userInfo',
     'js:publish'
 ]);
+/*
 
 var tmodjs = require('gulp-tmod');
 gulp.task('tmp', function () {
-    var stream = gulp.src('views/**/*.html')
+    var stream = gulp.src('views/!**!/!*.html')
         .pipe(tmodjs({
             templateBase: 'template'
         }))
         .pipe(gulp.dest('release'));
     return stream;
-});
+});*/
