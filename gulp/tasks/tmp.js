@@ -6,10 +6,12 @@
 var gulp = require('gulp');
 
 var tmodjs = require('gulp-tmod');
+
+//父节点是views
 gulp.task('tmp', function () {
     return gulp.src('views/**/*.html')
         .pipe(tmodjs({
-            templateBase: 'template'
+            templateBase: 'views'
         }))
         .pipe(gulp.dest('release'));
 });

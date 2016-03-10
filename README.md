@@ -26,5 +26,11 @@ gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
 gem sources -l
 gem install compass
 ```
+## 模板编译
+
+模板写在views 下 注:__模板地址对应__ views/home/app.html == home/app
+```
+gulp tmpWatch
+```
 
 

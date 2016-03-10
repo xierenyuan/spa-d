@@ -7,7 +7,7 @@ requirejs.config({
     baseUrl: 'js/',
     urlArgs: 'v=1.34',
     paths: {
-        'template': 'bower_components/artTemplate/dist/template',
+        'template': '../release/template',
         underscore: [
             'http://cdnjs.gtimg.com/cdnjs/libs/underscore.js/1.7.0/underscore-min',
             'bower_components/underscore/underscore-min'

@@ -3,16 +3,15 @@
  * @作者 xierenhong
  * @时间 16/3/10
  */
-define(function () {
+define(['template'], function (template) {
     return {
         title: '首页',
         body: function () {
-           // console.log(template);
-           /* var html = template('views/home/app', {
+            //父级 是views  如:views/home/app == home/app
+            var html = template('home/app', {
                 title: '测试啊啊 '
             });
-            console.log(html);*/
-            return '<h1>11测试1</h1>';
+            return html;
         }
     };
 });
