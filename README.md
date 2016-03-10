@@ -32,5 +32,6 @@ gem install compass
 ```
 gulp tmpWatch
 ```
+模板语法:https://github.com/aui/artTemplate
 
 
