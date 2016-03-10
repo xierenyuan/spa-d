@@ -35,6 +35,6 @@ gulp tmpWatch
 模板语法:https://github.com/aui/artTemplate
 
 ## 介绍
-使用了spa+requirejs+artTemplate+sass+gulp
+__使用了__:spa+requirejs+artTemplate+sass+gulp+frozenui
 
 
