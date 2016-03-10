@@ -1,0 +1,27 @@
+{
+  "name": "spa-d",
+  "description": "spa demo",
+  "main": "index.js",
+  "authors": [
+    "xierenyuan@qq.com"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "spa",
+    "demo"
+  ],
+  "homepage": "https://github.com/xierenyuan/spa-d",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "requirejs": "~2.1.22",
+    "artTemplate": "~3.0.1",
+    "spa": "~2.0.1"
+  }
+}

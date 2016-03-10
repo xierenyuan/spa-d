@@ -1,0 +1,17 @@
+{
+  "name": "spa",
+  "authors": [
+    "zhaoda <zd6437@gmail.com>"
+  ],
+  "description": "A webapp framework for routing control and view transitions",
+  "main": "dist/spa.js",
+  "keywords": [
+    "spa",
+    "webapp",
+    "framework"
+  ],
+  "license": "MIT",
+  "homepage": "http://zhaoda.net/spa/docs/",
+  "ignore": [
+  ]
+}

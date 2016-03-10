@@ -1,0 +1,27 @@
+{
+  "name": "spa",
+  "authors": [
+    "zhaoda <zd6437@gmail.com>"
+  ],
+  "description": "A webapp framework for routing control and view transitions",
+  "main": "dist/spa.js",
+  "keywords": [
+    "spa",
+    "webapp",
+    "framework"
+  ],
+  "license": "MIT",
+  "homepage": "http://zhaoda.net/spa/docs/",
+  "ignore": [],
+  "version": "2.0.1",
+  "_release": "2.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.1",
+    "commit": "ce70460eb623fc582e032db73bbcd7a92d596f92"
+  },
+  "_source": "git://github.com/zhaoda/spa.git",
+  "_target": "~2.0.1",
+  "_originalSource": "spa",
+  "_direct": true
+}
