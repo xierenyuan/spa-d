@@ -1,4 +1,4 @@
-# spa-d
+# spa-demo
 ## 移动端 spa 搭建尝试
 
 ## 启动流程
@@ -33,5 +33,8 @@ gem install compass
 gulp tmpWatch
 ```
 模板语法:https://github.com/aui/artTemplate
+
+## 介绍
+使用了spa+requirejs+artTemplate+sass+gulp
 
 
