@@ -1,0 +1,33 @@
+{
+  "server": {
+    "root": "./",
+    "port": 8888,
+    "livereload": false
+  },
+  "css": {
+    "worker": {
+      "src": [
+        "sass/worker/*.scss"
+      ],
+      "compass": {
+        "css": "common/static/css/",
+        "sass": "sass",
+        "image": "common/static/img/",
+        "comments": true
+      },
+      "dist": "common/static/css/"
+    },
+    "ui": {
+      "src": [
+        "sass/common/*.scss"
+      ],
+      "compass": {
+        "css": "common/static/css/",
+        "sass": "sass",
+        "image": "common/static/img/",
+        "comments": true
+      },
+      "dist": "common/static/css/"
+    }
+  }
+}
