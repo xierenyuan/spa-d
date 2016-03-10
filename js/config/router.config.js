@@ -9,32 +9,17 @@ define(function () {
             route: '',
             classname: 'home',
             animate: 'fadeIn',
-            view: function () {
-                var $page = this;
-                requirejs(['home/home'], function (viewData) {
-                    $doc.trigger('spa:initpage', [$page, viewData])
-                });
-            }
+            ctrl: 'controller/home.controller'
         }, {
             route: 'video',
             classname: 'video',
             animate: 'slideInRight',
-            view: function () {
-                var $page = this;
-                requirejs(['video/video.page'], function (viewData) {
-                    $doc.trigger('spa:initpage', [$page, viewData])
-                })
-            }
+            ctrl: 'video/video.page'
         }, {
             route: 'demo/newpage',
             classname: 'demo-newpage',
             animate: 'slideInRight',
-            view: function () {
-                var $page = this;
-                requirejs(['demo.newpage'], function (viewData) {
-                    $doc.trigger('spa:initpage', [$page, viewData])
-                })
-            }
+            ctrl: 'demo.newpage'
         }
     ];
 });
