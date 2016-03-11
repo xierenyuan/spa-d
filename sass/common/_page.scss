@@ -1,0 +1,67 @@
+.has-header {
+  top: $bar-height;
+}
+// Force no header
+.no-header {
+  top: 0;
+}
+
+.has-subheader {
+  top: $bar-height + $bar-subheader-height;
+}
+.has-tabs-top {
+  top: $bar-height + $tabs-height;
+}
+.has-header.has-subheader.has-tabs-top {
+  top: $bar-height + $bar-subheader-height + $tabs-height;
+}
+
+.has-footer {
+  bottom: $bar-footer-height;
+}
+.has-subfooter {
+  bottom: $bar-footer-height + $bar-subfooter-height;
+}
+
+.has-tabs,
+.bar-footer.has-tabs {
+  bottom: $tabs-height;
+  &.pane{
+    bottom: $tabs-height;
+    height:auto;
+  }
+}
+
+.has-footer.has-tabs {
+  bottom: $tabs-height + $bar-footer-height;
+}
+
+// A full screen section with a solid background
+.pane {
+  @include translate3d(0,0,0);
+  @include transition-duration(0);
+  z-index: $z-index-pane;
+}
+.view {
+  z-index: $z-index-view;
+}
+.pane,
+.view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $base-background-color;
+  overflow: hidden;
+}
+.view-container {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 44px;
+}
+@import "header";

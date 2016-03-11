@@ -5,7 +5,7 @@
  */
 requirejs.config({
     baseUrl: 'js/',
-    urlArgs: 'v=1.34',
+    urlArgs: 'v='+new Date().getTime(),
     paths: {
         'template': '../release/template',
         underscore: [

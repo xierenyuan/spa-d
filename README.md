@@ -34,4 +34,6 @@ gulp tmpWatch
 ```
 模板语法:https://github.com/aui/artTemplate
 
+## 介绍
+__使用了__:spa+requirejs+artTemplate+sass+gulp+frozenui
 

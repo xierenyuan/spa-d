@@ -1,0 +1,18 @@
+.bar-budejie {
+
+  .button.button-icon {
+    color: #fff;
+    [class^=ui-icon-] {
+      line-height: 0;
+    }
+    i {
+      color: #fff;
+    }
+  }
+
+  .button{
+    a{
+      color: #fff;
+    }
+  }
+}

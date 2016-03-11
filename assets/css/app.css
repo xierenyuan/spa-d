@@ -4106,3 +4106,573 @@ h6, .ui-txt-tips {
     -webkit-background-size: 100% 1px;
   }
 }
+/**
+ * Bar (Headers and Footers)
+ * --------------------------------------------------
+ */
+/* line 6, ../../sass/bar/_bar.scss */
+.bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+  height: 44px;
+  border-width: 0;
+  border-style: solid;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+  /* border-width: 1px will actually create 2 device pixels on retina */
+  /* this nifty trick sets an actual 1px border on hi-res displays */
+  background-size: 0;
+}
+@media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  /* line 6, ../../sass/bar/_bar.scss */
+  .bar {
+    border: none;
+    background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
+    background-position: bottom;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+  }
+}
+/* line 42, ../../sass/bar/_bar.scss */
+.bar.bar-clear {
+  border: none;
+  background: none;
+  color: #fff;
+}
+/* line 47, ../../sass/bar/_bar.scss */
+.bar.bar-clear .button {
+  color: #fff;
+}
+/* line 50, ../../sass/bar/_bar.scss */
+.bar.bar-clear .title {
+  color: #fff;
+}
+/* line 56, ../../sass/bar/_bar.scss */
+.bar.item-input-inset .item-input-wrapper {
+  margin-top: -1px;
+}
+/* line 59, ../../sass/bar/_bar.scss */
+.bar.item-input-inset .item-input-wrapper input {
+  padding-left: 8px;
+  width: 94%;
+  height: 28px;
+  background: transparent;
+}
+/* line 68, ../../sass/bar/_bar.scss */
+.bar.bar-light {
+  border-color: #ddd;
+  background-color: white;
+  background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
+  color: #444;
+}
+/* line 67, ../../sass/_mixins.scss */
+.bar.bar-light .title {
+  color: #444;
+}
+/* line 70, ../../sass/bar/_bar.scss */
+.bar.bar-light.bar-footer {
+  background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%);
+}
+/* line 74, ../../sass/bar/_bar.scss */
+.bar.bar-budejie {
+  border-color: #b30d37;
+  background-color: #e21145;
+  background-image: linear-gradient(0deg, #b30d37, #b30d37 50%, transparent 50%);
+  color: #fff;
+}
+/* line 67, ../../sass/_mixins.scss */
+.bar.bar-budejie .title {
+  color: #fff;
+}
+/* line 76, ../../sass/bar/_bar.scss */
+.bar.bar-budejie.bar-footer {
+  background-image: linear-gradient(180deg, #b30d37, #b30d37 50%, transparent 50%);
+}
+/* line 80, ../../sass/bar/_bar.scss */
+.bar.bar-positive {
+  border-color: #0c60ee;
+  background-color: #387ef5;
+  background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
+  color: #fff;
+}
+/* line 67, ../../sass/_mixins.scss */
+.bar.bar-positive .title {
+  color: #fff;
+}
+/* line 82, ../../sass/bar/_bar.scss */
+.bar.bar-positive.bar-footer {
+  background-image: linear-gradient(180deg, #0c60ee, #0c60ee 50%, transparent 50%);
+}
+/* line 87, ../../sass/bar/_bar.scss */
+.bar.bar-assertive {
+  border-color: #e42112;
+  background-color: #ef473a;
+  background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);
+  color: #fff;
+}
+/* line 67, ../../sass/_mixins.scss */
+.bar.bar-assertive .title {
+  color: #fff;
+}
+/* line 89, ../../sass/bar/_bar.scss */
+.bar.bar-assertive.bar-footer {
+  background-image: linear-gradient(180deg, #e42112, #e42112 50%, transparent 50%);
+}
+/* line 97, ../../sass/bar/_bar.scss */
+.bar .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  margin: 0 10px;
+  min-width: 30px;
+  height: 43px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 44px;
+}
+/* line 122, ../../sass/bar/_bar.scss */
+.bar .title.title-left {
+  text-align: left;
+}
+/* line 125, ../../sass/bar/_bar.scss */
+.bar .title.title-right {
+  text-align: right;
+}
+/* line 130, ../../sass/bar/_bar.scss */
+.bar .title a {
+  color: inherit;
+}
+/* line 134, ../../sass/bar/_bar.scss */
+.bar .button {
+  z-index: 1;
+  padding: 0 8px;
+  min-width: initial;
+  min-height: 31px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 32px;
+}
+/* line 143, ../../sass/bar/_bar.scss */
+.bar .button.button-icon:before,
+.bar .button .icon:before, .bar .button.icon:before, .bar .button.icon-left:before, .bar .button.icon-right:before {
+  padding-right: 2px;
+  padding-left: 2px;
+  font-size: 20px;
+  line-height: 32px;
+}
+/* line 154, ../../sass/bar/_bar.scss */
+.bar .button.button-icon {
+  font-size: 17px;
+}
+/* line 156, ../../sass/bar/_bar.scss */
+.bar .button.button-icon .icon:before, .bar .button.button-icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before {
+  vertical-align: top;
+  font-size: 32px;
+  line-height: 32px;
+}
+/* line 165, ../../sass/bar/_bar.scss */
+.bar .button.button-clear {
+  padding-right: 2px;
+  padding-left: 2px;
+  font-weight: 300;
+  font-size: 17px;
+}
+/* line 171, ../../sass/bar/_bar.scss */
+.bar .button.button-clear .icon:before, .bar .button.button-clear.icon:before, .bar .button.button-clear.icon-left:before, .bar .button.button-clear.icon-right:before {
+  font-size: 32px;
+  line-height: 32px;
+}
+/* line 180, ../../sass/bar/_bar.scss */
+.bar .button.back-button {
+  display: block;
+  margin-right: 5px;
+  padding: 0;
+  white-space: nowrap;
+  font-weight: 400;
+}
+/* line 188, ../../sass/bar/_bar.scss */
+.bar .button.back-button.active, .bar .button.back-button.activated {
+  opacity: 0.2;
+}
+/* line 194, ../../sass/bar/_bar.scss */
+.bar .button-bar > .button,
+.bar .buttons > .button {
+  min-height: 31px;
+  line-height: 32px;
+}
+/* line 200, ../../sass/bar/_bar.scss */
+.bar .button-bar + .button,
+.bar .button + .button-bar {
+  margin-left: 5px;
+}
+/* line 206, ../../sass/bar/_bar.scss */
+.bar .buttons,
+.bar .buttons.primary-buttons,
+.bar .buttons.secondary-buttons {
+  display: inherit;
+}
+/* line 211, ../../sass/bar/_bar.scss */
+.bar .buttons span {
+  display: inline-block;
+}
+/* line 214, ../../sass/bar/_bar.scss */
+.bar .buttons-left span {
+  margin-right: 5px;
+  display: inherit;
+}
+/* line 218, ../../sass/bar/_bar.scss */
+.bar .buttons-right span {
+  margin-left: 5px;
+  display: inherit;
+}
+/* line 224, ../../sass/bar/_bar.scss */
+.bar .title + .button:last-child,
+.bar > .button + .button:last-child,
+.bar > .button.pull-right,
+.bar .buttons.pull-right,
+.bar .title + .buttons {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+}
+
+/* line 239, ../../sass/bar/_bar.scss */
+.platform-android .nav-bar-has-subheader .bar {
+  background-image: none;
+}
+/* line 245, ../../sass/bar/_bar.scss */
+.platform-android .bar .back-button .icon:before {
+  font-size: 24px;
+}
+/* line 249, ../../sass/bar/_bar.scss */
+.platform-android .bar .title {
+  font-size: 19px;
+  line-height: 44px;
+}
+
+/* line 259, ../../sass/bar/_bar.scss */
+.bar-light .button {
+  border-color: #ddd;
+  background-color: white;
+  color: #444;
+}
+/* line 11, ../../sass/_mixins.scss */
+.bar-light .button:hover {
+  color: #444;
+  text-decoration: none;
+}
+/* line 15, ../../sass/_mixins.scss */
+.bar-light .button.active, .bar-light .button.activated {
+  border-color: #ccc;
+  background-color: #fafafa;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+/* line 24, ../../sass/_mixins.scss */
+.bar-light .button.button-clear {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #444;
+  font-size: 17px;
+}
+/* line 34, ../../sass/_mixins.scss */
+.bar-light .button.button-icon {
+  border-color: transparent;
+  background: none;
+}
+
+/* line 265, ../../sass/bar/_bar.scss */
+.bar-budejie .button {
+  border-color: #b30d37;
+  background-color: #e21145;
+  color: #fff;
+}
+/* line 11, ../../sass/_mixins.scss */
+.bar-budejie .button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 15, ../../sass/_mixins.scss */
+.bar-budejie .button.active, .bar-budejie .button.activated {
+  border-color: #b30d37;
+  background-color: #b30d37;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+/* line 24, ../../sass/_mixins.scss */
+.bar-budejie .button.button-clear {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 17px;
+}
+/* line 34, ../../sass/_mixins.scss */
+.bar-budejie .button.button-icon {
+  border-color: transparent;
+  background: none;
+}
+
+/* line 271, ../../sass/bar/_bar.scss */
+.bar-positive .button {
+  border-color: #0c60ee;
+  background-color: #387ef5;
+  color: #fff;
+}
+/* line 11, ../../sass/_mixins.scss */
+.bar-positive .button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 15, ../../sass/_mixins.scss */
+.bar-positive .button.active, .bar-positive .button.activated {
+  border-color: #0c60ee;
+  background-color: #0c60ee;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+/* line 24, ../../sass/_mixins.scss */
+.bar-positive .button.button-clear {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 17px;
+}
+/* line 34, ../../sass/_mixins.scss */
+.bar-positive .button.button-icon {
+  border-color: transparent;
+  background: none;
+}
+
+/* line 278, ../../sass/bar/_bar.scss */
+.bar-assertive .button {
+  border-color: #e42112;
+  background-color: #ef473a;
+  color: #fff;
+}
+/* line 11, ../../sass/_mixins.scss */
+.bar-assertive .button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 15, ../../sass/_mixins.scss */
+.bar-assertive .button.active, .bar-assertive .button.activated {
+  border-color: #e42112;
+  background-color: #e42112;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+/* line 24, ../../sass/_mixins.scss */
+.bar-assertive .button.button-clear {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 17px;
+}
+/* line 34, ../../sass/_mixins.scss */
+.bar-assertive .button.button-icon {
+  border-color: transparent;
+  background: none;
+}
+
+/* line 287, ../../sass/bar/_bar.scss */
+.bar-header {
+  top: 0;
+  border-top-width: 0;
+  border-bottom-width: 1px;
+}
+/* line 291, ../../sass/bar/_bar.scss */
+.bar-header.has-tabs-top {
+  border-bottom-width: 0px;
+  background-image: none;
+}
+
+/* line 296, ../../sass/bar/_bar.scss */
+.tabs-top .bar-header {
+  border-bottom-width: 0px;
+  background-image: none;
+}
+
+/* line 302, ../../sass/bar/_bar.scss */
+.bar-footer {
+  bottom: 0;
+  border-top-width: 1px;
+  border-bottom-width: 0;
+  background-position: top;
+  height: 44px;
+}
+/* line 310, ../../sass/bar/_bar.scss */
+.bar-footer.item-input-inset {
+  position: absolute;
+}
+
+/* line 316, ../../sass/bar/_bar.scss */
+.bar-tabs {
+  padding: 0;
+}
+
+/* line 320, ../../sass/bar/_bar.scss */
+.bar-subheader {
+  top: 44px;
+  display: block;
+  height: 44px;
+}
+
+/* line 326, ../../sass/bar/_bar.scss */
+.bar-subfooter {
+  bottom: 44px;
+  display: block;
+  height: 44px;
+}
+
+/* line 333, ../../sass/bar/_bar.scss */
+.nav-bar-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+}
+
+/* line 341, ../../sass/bar/_bar.scss */
+.bar .back-button.hide,
+.bar .buttons .hide {
+  display: none;
+}
+
+/* line 346, ../../sass/bar/_bar.scss */
+.nav-bar-tabs-top .bar {
+  background-image: none;
+}
+
+/* line 1, ../../sass/common/_page.scss */
+.has-header {
+  top: 44px;
+}
+
+/* line 5, ../../sass/common/_page.scss */
+.no-header {
+  top: 0;
+}
+
+/* line 9, ../../sass/common/_page.scss */
+.has-subheader {
+  top: 88px;
+}
+
+/* line 12, ../../sass/common/_page.scss */
+.has-tabs-top {
+  top: 93px;
+}
+
+/* line 15, ../../sass/common/_page.scss */
+.has-header.has-subheader.has-tabs-top {
+  top: 137px;
+}
+
+/* line 19, ../../sass/common/_page.scss */
+.has-footer {
+  bottom: 44px;
+}
+
+/* line 22, ../../sass/common/_page.scss */
+.has-subfooter {
+  bottom: 88px;
+}
+
+/* line 26, ../../sass/common/_page.scss */
+.has-tabs,
+.bar-footer.has-tabs {
+  bottom: 49px;
+}
+/* line 29, ../../sass/common/_page.scss */
+.has-tabs.pane,
+.bar-footer.has-tabs.pane {
+  bottom: 49px;
+  height: auto;
+}
+
+/* line 35, ../../sass/common/_page.scss */
+.has-footer.has-tabs {
+  bottom: 93px;
+}
+
+/* line 40, ../../sass/common/_page.scss */
+.pane {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition-duration: 0;
+  transition-duration: 0;
+  z-index: 1;
+}
+
+/* line 45, ../../sass/common/_page.scss */
+.view {
+  z-index: 1;
+}
+
+/* line 48, ../../sass/common/_page.scss */
+.pane,
+.view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* line 60, ../../sass/common/_page.scss */
+.view-container {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 44px;
+}
+
+/* line 3, ../../sass/common/_header.scss */
+.bar-budejie .button.button-icon {
+  color: #fff;
+}
+/* line 5, ../../sass/common/_header.scss */
+.bar-budejie .button.button-icon [class^=ui-icon-] {
+  line-height: 0;
+}
+/* line 8, ../../sass/common/_header.scss */
+.bar-budejie .button.button-icon i {
+  color: #fff;
+}
+/* line 14, ../../sass/common/_header.scss */
+.bar-budejie .button a {
+  color: #fff;
+}

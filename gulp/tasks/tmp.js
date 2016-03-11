@@ -11,7 +11,8 @@ var tmodjs = require('gulp-tmod');
 gulp.task('tmp', function () {
     return gulp.src('views/**/*.html')
         .pipe(tmodjs({
-            templateBase: 'views'
+            templateBase: 'views',
+            cache:false
         }))
         .pipe(gulp.dest('release'));
 });
