@@ -1,4 +1,4 @@
-# spa-d
+# spa-demo
 ## 移动端 spa 搭建尝试
 
 ## 启动流程
@@ -36,4 +36,5 @@ gulp tmpWatch
 
 ## 介绍
 __使用了__:spa+requirejs+artTemplate+sass+gulp+frozenui
+
 
