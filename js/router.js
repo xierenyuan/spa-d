@@ -18,7 +18,6 @@ define(['config/router.config', 'underscore'], function (RouterConfig, _) {
                 view: function () {
                     var $page = this;
                     require([item.ctrl], function (viewData) {
-                        console.log(viewData);
                         window.SPA.$doc.trigger('spa:initpage', [$page, viewData]);
                     });
 

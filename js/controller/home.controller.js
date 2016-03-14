@@ -12,6 +12,13 @@ define(['template'], function (template) {
                 title: '测试啊啊 '
             });
             return html;
+        },
+        init: function () {
+            var $view = this;
+            $view.find('#btnSlideMenu').on('click',function(){
+                console.log('');
+            });
+            console.log($view);
         }
     };
 });

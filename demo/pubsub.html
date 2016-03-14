@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布订阅模式</title>
+</head>
+<body>
+<button id="btnAdd">添加</button>
+<button id="btnRemove">减少</button>
+
+<label id="lbl"></label>
+
+<script type='text/javascript' src='http://cdnjs.gtimg.com/cdnjs/libs/underscore.js/1.7.0/underscore-min.js'></script>
+<script type="text/javascript">
+    (function (win, doc) {
+        function Modal(attr) {
+            this.attributes = _.isObject(attr) ? attr : {};
+
+            this._callbacks = [];
+        }
+
+        Modal.prototype = {
+            //绑定事件
+            on: function (event, callback) {
+                this._callbacks.push({
+                    event: event,
+                    callback: callback
+                });
+            },
+            //移除事件
+            off: function (event) {
+                this._callbacks.splice(this._indexOfByCallBacks(event), 1);
+            },
+            _indexOfByCallBacks: function (value) {
+                var _index = -1;
+                this._callbacks.forEach(function (evtObj, index) {
+                    if (evtObj.event == value) {
+                        _index = index;
+                        return index;
+                    }
+                });
+                return _index;
+            },
+            //触发事件
+            trigger: function (event) {
+                var self = this;
+                self._callbacks.forEach(function (eventObj) {
+                    if (eventObj.event == event) {
+                        eventObj.callback.call(self, self.attributes);
+                    }
+                });
+            },
+            //设置属性
+            set: function (key, value) {
+                if (_.isString(key) && value) {
+                    this.attributes[key] = value;
+                    this.trigger('change:' + key, this);
+                } else {
+                    _.merge(this.attributes, key);
+                }
+            }
+
+        };
+
+        var modal = new Modal();
+
+
+        modal.on('change:total', function () {
+            console.log(this.attributes['total']);
+            console.log('i am  总价更新');
+        });
+        modal.on('change:prop', function () {
+            console.log('i am  change  prop');
+        });
+
+        modal.off('change:prop');
+
+        var btnAdd = doc.querySelectorAll('#btnAdd');
+        btnAdd[0].onclick = function () {
+            modal.trigger('change:prop');
+            modal.set('total', 23);
+        };
+
+    })(window, document);
+</script>
+</body>
+</html>
